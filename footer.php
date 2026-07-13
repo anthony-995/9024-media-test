@@ -1,13 +1,3 @@
-<?php
-/**
- * The footer template for the 9024 Media theme
- *
- * @package    WordPress
- * @subpackage 9024_Media
- * @since      1.0
- */
-?>
-
 <footer id="colophon" class="site-footer bg-brand-black text-white py-16 border-t border-solid border-neutral-900">
 	<div class="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
 		

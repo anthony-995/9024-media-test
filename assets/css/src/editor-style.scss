@@ -1,12 +1,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-// Gutenberg Admin Area overrides
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
-// Center and scope standard blocks
 .wp-block {
   max-width: 1200px;
   margin-left: auto;

@@ -1,12 +1,4 @@
 <?php
-/**
- * The front page template file for rendering custom Gutenberg blocks.
- *
- * @package    WordPress
- * @subpackage 9024_Media
- * @since      1.0
- */
-
 get_header();
 ?>
 

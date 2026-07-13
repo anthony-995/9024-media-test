@@ -1,12 +1,4 @@
 <?php
-/**
- * Main fallback index template
- *
- * @package    WordPress
- * @subpackage 9024_Media
- * @since      1.0
- */
-
 get_header();
 ?>
 

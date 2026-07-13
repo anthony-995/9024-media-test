@@ -2,7 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-// Base HTML styling definitions
 body {
   font-family: 'Open Sans', sans-serif;
   color: #1D1E1C;
@@ -17,13 +16,11 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-// Global visual adjustments
 img {
   max-width: 100%;
   height: auto;
 }
 
-// Utility styling for underlines
 .link-hover-underline {
   position: relative;
   text-decoration: none;
