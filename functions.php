@@ -39,7 +39,7 @@ function _9024_is_dev() {
 }
 
 function _9024_enqueue_scripts() {
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap', array(), null );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap', array(), null );
 
 	if ( _9024_is_dev() ) {
 		wp_enqueue_script( 'vite-client', 'http://localhost:5173/@vite/client', array(), null, false );
@@ -59,3 +59,5 @@ function _9024_script_loader_tag( $tag, $handle, $src ) {
 	return $tag;
 }
 add_filter( 'script_loader_tag', '_9024_script_loader_tag', 10, 3 );
+
+require_once get_template_directory() . '/functionality/setup.php';

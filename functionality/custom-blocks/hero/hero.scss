@@ -1,0 +1,7 @@
+.hero-block {
+  // Enforce object-cover properties on background media
+  video, img {
+    object-fit: cover;
+    object-position: center;
+  }
+}

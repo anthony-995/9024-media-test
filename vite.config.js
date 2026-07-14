@@ -15,14 +15,8 @@ export default defineConfig({
         main: path.resolve(__dirname, 'assets/js/src/index.js'),
         editor: path.resolve(__dirname, 'assets/css/src/editor-style.scss'),
         ...Object.fromEntries(
-          glob.sync('functionality/custom-blocks/**/*.scss').map(file => [
-            `css/${path.basename(file, '.scss')}`,
-            path.resolve(__dirname, file)
-          ])
-        ),
-        ...Object.fromEntries(
           glob.sync('functionality/custom-blocks/**/*.js').map(file => [
-            `js/${path.basename(file, '.js')}`,
+            path.basename(file, '.js'),
             path.resolve(__dirname, file)
           ])
         ),

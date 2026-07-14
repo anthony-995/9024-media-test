@@ -27,12 +27,12 @@
 	</div>
 </div>
 
-<header id="masthead" class="site-header absolute top-0 left-0 w-full z-50 bg-transparent">
-	<div class="max-w-[1440px] mx-auto px-6 py-6 md:px-12 flex justify-between items-center">
+<header id="masthead" class="site-header absolute top-[36px] left-0 right-0 z-50 bg-transparent px-[48px] h-[86px] flex items-center box-border">
+	<div class="w-full flex justify-between items-center">
 		
 		<div class="site-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="inline-block text-white hover:text-brand-orange transition-colors duration-300" rel="home">
-				<svg width="48" height="48" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg" class="block">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="inline-block text-white hover:text-brand-black transition-colors duration-300" rel="home">
+				<svg width="86" height="86" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg" class="block">
 					<path d="M41.4365 0V41.4366H0V0H41.4365ZM32.2289 32.2284V9.20818H9.20816V23.0197H27.6245V27.6241H9.20816V32.2279L32.2289 32.2284ZM27.6245 13.8125V18.4164H13.8125V13.8125H27.6245Z" fill="currentColor"/>
 					<path d="M86.3312 0V41.4923H44.8398V0H86.3312ZM77.111 32.2716V9.22067H54.0596V32.2716H77.111ZM58.67 27.6615V13.8308H72.5009V27.6615H58.67Z" fill="currentColor"/>
 					<path d="M41.4361 44.8555V86.3867H0.000976562V44.8555H41.4361ZM9.1366 58.6992H27.5923V63.3121H9.1366V77.1559H32.2072V72.543H13.7496V67.9299H32.2072V54.0862H9.1366V58.6992Z" fill="currentColor"/>
@@ -41,14 +41,16 @@
 			</a>
 		</div>
 		
-		<nav id="site-navigation" class="main-navigation flex items-center gap-8">
-			<a href="#lets-chat" class="hidden sm:inline-flex items-center justify-center w-28 h-28 rounded-full border border-solid border-white text-white font-heading font-bold text-xs tracking-wider uppercase text-center p-3 hover:bg-brand-orange hover:border-brand-orange transition-all duration-300">
-				Let's Chat
+		<nav id="site-navigation" class="main-navigation flex items-center gap-6 md:gap-8">
+			<a href="#lets-chat" class="flex items-center justify-center w-[142px] h-[41px] border border-solid border-brand-orange text-white hover:bg-brand-orange hover:text-brand-black transition-all duration-300 no-underline font-sans font-normal text-[14px] leading-[26px] tracking-[0.1em] uppercase">
+				LET'S CHAT
 			</a>
-			<button class="hamburger-menu flex flex-col gap-1.5 justify-center items-center w-8 h-8 bg-transparent border-none cursor-pointer" aria-label="Toggle navigation menu">
-				<span class="w-7 h-0.5 bg-white transition-all duration-300"></span>
-				<span class="w-7 h-0.5 bg-white transition-all duration-300"></span>
-				<span class="w-7 h-0.5 bg-white transition-all duration-300"></span>
+			<button class="hamburger-menu flex items-center justify-center bg-transparent border-none p-0 cursor-pointer w-[41px] h-[26px]" aria-label="Toggle navigation menu">
+				<svg width="41" height="26" viewBox="0 0 41 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="block">
+					<path d="M1 1H41" stroke="white" stroke-width="2" stroke-linecap="round"/>
+					<path d="M1 25H41" stroke="white" stroke-width="2" stroke-linecap="round"/>
+					<path d="M11 13H41" stroke="#FB3C1E" stroke-width="2" stroke-linecap="round"/>
+				</svg>
 			</button>
 		</nav>
 

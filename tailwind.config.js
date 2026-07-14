@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         heading: ['Oswald', 'sans-serif'],
         body: ['Open Sans', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
       lineHeight: {
         'tight-heading': '0.8',

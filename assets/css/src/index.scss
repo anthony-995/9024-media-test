@@ -4,8 +4,11 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #1D1E1C;
-  background-color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  background-color: #1D1E1C;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -14,6 +17,17 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+h2, h3 {
+  font-weight: 700;
+  line-height: 1.0;
 }
 
 img {
