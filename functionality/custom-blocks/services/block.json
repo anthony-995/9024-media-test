@@ -1,0 +1,14 @@
+{
+  "name": "acf/services",
+  "title": "Services Section",
+  "description": "An interactive services block with hover-activated background media transitions and outlined typography animation.",
+  "category": "9024-blocks",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 87 87\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M41.4365 0V41.4366H0V0H41.4365ZM32.2289 32.2284V9.20818H9.20816V23.0197H27.6245V27.6241H9.20816V32.2279L32.2289 32.2284ZM27.6245 13.8125V18.4164H13.8125V13.8125H27.6245Z\" fill=\"currentColor\"/><path d=\"M86.3312 0V41.4923H44.8398V0H86.3312ZM77.111 32.2716V9.22067H54.0596V32.2716H77.111ZM58.67 27.6615V13.8308H72.5009V27.6615H58.67Z\" fill=\"currentColor\"/><path d=\"M41.4361 44.8555V86.3867H0.000976562V44.8555H41.4361ZM9.1366 58.6992H27.5923V63.3121H9.1366V77.1559H32.2072V72.543H13.7496V67.9299H32.2072V54.0862H9.1366V58.6992Z\" fill=\"currentColor\"/><path d=\"M86.3389 44.8555V86.403H44.8398V44.8555H86.3389ZM54.072 54.0881V67.9371H72.5378V77.1703H77.1542V54.0881H72.5378V63.3208H58.6884V54.0881H54.072Z\" fill=\"currentColor\"/></svg>",
+  "apiVersion": 2,
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "style": "9024-services-style",
+  "script": "9024-services-script"
+}
