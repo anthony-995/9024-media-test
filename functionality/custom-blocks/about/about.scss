@@ -1,0 +1,93 @@
+.about-block {
+  .btn-underline {
+    position: relative;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1D1E1C;
+    padding-bottom: 8px;
+    display: inline-block;
+    letter-spacing: -0.02em;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: 40%;
+      background-color: #FB3C1E;
+      transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  .instagram-post {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1D1E1C;
+    transform-style: preserve-3d;
+    will-change: transform;
+
+    @media (min-width: 1024px) {
+      width: 601px;
+      height: 737px;
+      flex-shrink: 0;
+    }
+
+    .post-header {
+      height: 67px;
+      background: #1D1E1C;
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+    }
+
+    .post-image-wrap {
+      position: relative;
+      background: #151515;
+      width: 100%;
+      aspect-ratio: 1/1;
+
+      @media (min-width: 1024px) {
+        width: 601px;
+        height: 601px;
+      }
+    }
+
+    .post-footer {
+      height: 69px;
+      background: #1D1E1C;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+
+    .action-like {
+      color: #9B9B9B;
+      transition: color 0.2s ease;
+      
+      svg {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2px;
+        transition: fill 0.2s ease, stroke 0.2s ease;
+      }
+
+      &.liked {
+        color: #FB3C1E !important;
+        svg {
+          fill: #FB3C1E !important;
+          stroke: transparent !important;
+        }
+      }
+    }
+  }
+}

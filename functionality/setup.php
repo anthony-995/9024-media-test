@@ -47,14 +47,9 @@ function _9024_register_block_assets( $block_name ) {
 	$is_dev = _9024_is_dev();
 
 	$css_handle = "9024-{$block_name}-style";
-	if ( $is_dev ) {
-		$css_src = "http://localhost:5173/functionality/custom-blocks/{$block_name}/{$block_name}.scss";
-		wp_register_style( $css_handle, $css_src, array(), null );
-	} else {
-		$css_rel = "/assets/dist/css/{$block_name}.css";
-		if ( file_exists( $theme_dir . $css_rel ) ) {
-			wp_register_style( $css_handle, $theme_uri . $css_rel, array(), '1.0.0' );
-		}
+	$css_rel = "/assets/dist/css/{$block_name}.css";
+	if ( file_exists( $theme_dir . $css_rel ) ) {
+		wp_register_style( $css_handle, $theme_uri . $css_rel, array(), '1.0.0' );
 	}
 
 	$js_handle = "9024-{$block_name}-script";
@@ -71,7 +66,7 @@ function _9024_register_block_assets( $block_name ) {
 
 add_filter( 'script_loader_tag', '_9024_block_script_loader_tag', 10, 3 );
 function _9024_block_script_loader_tag( $tag, $handle, $src ) {
-	if ( _9024_is_dev() && strpos( $handle, '9024-' ) === 0 && strpos( $handle, '-script' ) !== false ) {
+	if ( strpos( $handle, '9024-' ) === 0 && strpos( $handle, '-script' ) !== false ) {
 		return sprintf( '<script type="module" src="%s" id="%s-js"></script>', esc_url( $src ), esc_attr( $handle ) );
 	}
 	return $tag;
