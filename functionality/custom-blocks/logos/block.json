@@ -1,0 +1,14 @@
+{
+  "name": "acf/logos",
+  "title": "Logos Carousel Block",
+  "description": "An infinite marquee logos slider block.",
+  "category": "9024-blocks",
+  "icon": "images-alt2",
+  "apiVersion": 2,
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "style": "9024-logos-style",
+  "script": "9024-logos-script"
+}

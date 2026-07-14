@@ -1,0 +1,42 @@
+.logos-block {
+  background-color: #FFFFFF;
+  
+  .logos-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+
+  .logos-slide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-shrink: 0;
+    animation: marquee 25s linear infinite;
+  }
+
+  .logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    img {
+      max-height: 114px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 104px));
+  }
+}
