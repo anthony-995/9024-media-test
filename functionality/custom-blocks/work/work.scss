@@ -1,0 +1,212 @@
+.work-block {
+  background-color: #FFFFFF;
+
+  .work-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: center;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: start;
+    }
+  }
+
+  .work-col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      width: 700px;
+      flex-shrink: 0;
+      margin-top: 150px;
+    }
+  }
+
+  .work-col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      width: 600px;
+      flex-shrink: 0;
+      margin-top: 0px;
+    }
+  }
+
+  .work-card {
+    position: relative;
+    overflow: hidden;
+    background-color: #1D1E1C;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #707070 !important;
+    border-radius: 0px !important;
+    isolation: isolate;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease;
+
+    * {
+      border-radius: 0px !important;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    &.card-1 {
+      @media (min-width: 1024px) {
+        width: 700px;
+        height: 700px;
+      }
+    }
+
+    &.card-2 {
+      @media (min-width: 1024px) {
+        width: 600px;
+        height: 600px;
+      }
+    }
+
+    &.card-3 {
+      @media (min-width: 1024px) {
+        width: 600px;
+        height: 600px;
+        align-self: flex-end;
+        margin-left: auto;
+      }
+    }
+
+    &.card-4 {
+      aspect-ratio: 560 / 700;
+
+      @media (min-width: 1024px) {
+        width: 560px;
+        height: 700px;
+      }
+    }
+
+    .card-initial-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      mix-blend-mode: hue;
+      border: 1px solid #707070;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .card-hover-overlay {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+      border: 1px solid #707070;
+      z-index: 20;
+    }
+
+    .card-initial-title {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 40px;
+      letter-spacing: -0.02em;
+      color: #FB3C1E;
+
+      @media (min-width: 768px) {
+        font-size: 70px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 100px;
+      }
+    }
+
+    .card-hover-title {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+
+      @media (min-width: 768px) {
+        font-size: 36px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 50px;
+      }
+    }
+
+    .card-hover-desc {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+
+      @media (min-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+
+    .card-hover-btn {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      background-color: #FB3C1E;
+      text-decoration: none !important;
+
+      @media (min-width: 1024px) {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  .see-all-link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #1D1E1C;
+    text-decoration: none !important;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 40px;
+      background-color: #FB3C1E;
+      transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
