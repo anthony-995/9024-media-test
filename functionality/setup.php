@@ -48,7 +48,7 @@ function _9024_register_block_assets( $block_name ) {
 
 	$css_handle = "9024-{$block_name}-style";
 	$css_rel = "/assets/dist/css/{$block_name}.css";
-	if ( file_exists( $theme_dir . $css_rel ) ) {
+	if ( ! $is_dev && file_exists( $theme_dir . $css_rel ) ) {
 		$css_ver = filemtime( $theme_dir . $css_rel );
 		wp_register_style( $css_handle, $theme_uri . $css_rel, array(), $css_ver );
 	}

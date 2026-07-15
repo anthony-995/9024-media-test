@@ -24,10 +24,12 @@ function _9024_is_dev() {
 	}
 
 	$is_dev = false;
-	$fp = @fsockopen( '127.0.0.1', 5173, $errno, $errstr, 0.05 );
-	if ( $fp ) {
-		$is_dev = true;
-		fclose( $fp );
+	if ( wp_get_environment_type() === 'local' || wp_get_environment_type() === 'development' ) {
+		$fp = @fsockopen( '127.0.0.1', 5173, $errno, $errstr, 0.05 );
+		if ( $fp ) {
+			$is_dev = true;
+			fclose( $fp );
+		}
 	}
 	return $is_dev;
 }

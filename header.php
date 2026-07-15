@@ -33,6 +33,9 @@
 </noscript>
 <script>
 	setTimeout(function() {
+		if (window.preloaderGSAP) {
+			return;
+		}
 		var loader = document.getElementById('loader');
 		if (loader && loader.style.display !== 'none') {
 			loader.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -104,9 +107,9 @@
 
 	<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 w-full text-neutral-400 font-heading text-sm tracking-widest uppercase">
 		<div class="flex gap-8">
-			<a href="https://instagram.com/9024media" target="_blank" rel="noopener" class="text-white hover:text-[#FB3C1E] transition-colors no-underline"><?php esc_html_e( 'INSTAGRAM', '9024-media' ); ?></a>
-			<a href="https://linkedin.com/company/9024media" target="_blank" rel="noopener" class="text-white hover:text-[#FB3C1E] transition-colors no-underline"><?php esc_html_e( 'LINKEDIN', '9024-media' ); ?></a>
-			<a href="https://tiktok.com/@9024media" target="_blank" rel="noopener" class="text-white hover:text-[#FB3C1E] transition-colors no-underline"><?php esc_html_e( 'TIKTOK', '9024-media' ); ?></a>
+			<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline"><?php esc_html_e( 'INSTAGRAM', '9024-media' ); ?></a>
+			<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline"><?php esc_html_e( 'LINKEDIN', '9024-media' ); ?></a>
+			<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline"><?php esc_html_e( 'TIKTOK', '9024-media' ); ?></a>
 		</div>
 		<div>
 			<a href="mailto:hello@9024media.com" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">HELLO@9024MEDIA.COM</a>
