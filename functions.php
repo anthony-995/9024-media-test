@@ -9,11 +9,7 @@ function _9024_setup() {
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'editor-styles' );
 
-	if ( _9024_is_dev() ) {
-		add_editor_style( 'http://localhost:5173/assets/css/src/editor-style.scss' );
-	} else {
-		add_editor_style( 'assets/dist/css/editor.css' );
-	}
+	add_editor_style( 'assets/dist/css/editor.css' );
 
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', '9024-media' ),
@@ -28,12 +24,10 @@ function _9024_is_dev() {
 	}
 
 	$is_dev = false;
-	if ( wp_get_environment_type() === 'local' || wp_get_environment_type() === 'development' ) {
-		$fp = @fsockopen( 'localhost', 5173, $errno, $errstr, 0.05 );
-		if ( $fp ) {
-			$is_dev = true;
-			fclose( $fp );
-		}
+	$fp = @fsockopen( '127.0.0.1', 5173, $errno, $errstr, 0.05 );
+	if ( $fp ) {
+		$is_dev = true;
+		fclose( $fp );
 	}
 	return $is_dev;
 }
@@ -41,14 +35,18 @@ function _9024_is_dev() {
 function _9024_enqueue_scripts() {
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap', array(), null );
 
-	// Always enqueue the compiled stylesheet statically to prevent dev-server MIME-type conflicts
-	wp_enqueue_style( '9024-main', get_template_directory_uri() . '/assets/dist/css/main.css', array(), '1.0.0' );
+	$theme_dir = get_template_directory();
+	$theme_uri = get_template_directory_uri();
 
 	if ( _9024_is_dev() ) {
 		wp_enqueue_script( 'vite-client', 'http://localhost:5173/@vite/client', array(), null, true );
 		wp_enqueue_script( '9024-main', 'http://localhost:5173/assets/js/src/index.js', array(), null, true );
 	} else {
-		wp_enqueue_script( '9024-main', get_template_directory_uri() . '/assets/dist/js/main.js', array(), '1.0.0', true );
+		$css_ver = file_exists( $theme_dir . '/assets/dist/css/main.css' ) ? filemtime( $theme_dir . '/assets/dist/css/main.css' ) : '1.0.0';
+		$js_ver = file_exists( $theme_dir . '/assets/dist/js/main.js' ) ? filemtime( $theme_dir . '/assets/dist/js/main.js' ) : '1.0.0';
+
+		wp_enqueue_style( '9024-main', $theme_uri . '/assets/dist/css/main.css', array(), $css_ver );
+		wp_enqueue_script( '9024-main', $theme_uri . '/assets/dist/js/main.js', array(), $js_ver, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', '_9024_enqueue_scripts' );

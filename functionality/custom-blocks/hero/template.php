@@ -4,7 +4,7 @@ $bg_image = get_field( 'bg_image' );
 $bg_video = get_field( 'bg_video' );
 $heading = get_field( 'heading' );
 $subheading = get_field( 'subheading' );
-$align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
+$align_class = !empty( $block['align'] ) ? 'align' . $block['align'] : 'alignfull';
 ?>
 
 <section class="hero-block relative w-full h-screen bg-brand-black flex items-center justify-center overflow-hidden <?php echo esc_attr( $align_class ); ?>">

@@ -13,32 +13,31 @@
 					</svg>
 				</a>
 				<p class="text-neutral-400 font-body text-base leading-relaxed">
-					9024 is a social-first, digital agency working with talent, brands and sporting organisations.
+					<?php esc_html_e( '9024 is a social-first, digital agency working with talent, brands and sporting organisations.', '9024-media' ); ?>
 				</p>
 			</div>
 
 			<div class="flex flex-col lg:items-end gap-10">
 				
 				<div class="flex flex-col lg:items-end">
-					<span class="text-neutral-400 font-heading text-[14px] tracking-[0.1em] uppercase mb-2">READY TO CHANGE THE GAME?</span>
+					<span class="text-neutral-400 font-heading text-[14px] tracking-[0.1em] uppercase mb-2"><?php esc_html_e( 'READY TO CHANGE THE GAME?', '9024-media' ); ?></span>
 					<a href="mailto:hello@9024media.com" class="footer-cta-link font-heading text-4xl md:text-5xl lg:text-6xl text-white hover:text-[#FB3C1E] transition-colors duration-300 uppercase tracking-tight no-underline">
-						LET'S TALK
+						<?php esc_html_e( "LET'S TALK", '9024-media' ); ?>
 					</a>
 				</div>
 
 				<div class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-heading tracking-widest uppercase">
-					<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">HOME</a>
-					<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">ABOUT</a>
-					<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">SERVICES</a>
-					<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">OUR WORK</a>
-					<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">CONTACT</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">HOME</a>
+					<a href="<?php echo esc_url( home_url( '/#about' ) ); ?>" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">ABOUT</a>
+					<a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">SERVICES</a>
+					<a href="<?php echo esc_url( home_url( '/#work' ) ); ?>" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">OUR WORK</a>
+					<a href="#colophon" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">CONTACT</a>
 				</div>
 
 				<div class="flex gap-6 text-sm font-heading tracking-widest uppercase">
-					<a href="#" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">INSTAGRAM</a>
-					<a href="#" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">LINKEDIN</a>
-					<a href="#" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">TIKTOK</a>
-					<a href="#" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">TWITTER</a>
+					<a href="https://instagram.com/9024media" target="_blank" rel="noopener" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">INSTAGRAM</a>
+					<a href="https://linkedin.com/company/9024media" target="_blank" rel="noopener" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">LINKEDIN</a>
+					<a href="https://tiktok.com/@9024media" target="_blank" rel="noopener" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">TIKTOK</a>
 				</div>
 
 			</div>
@@ -50,13 +49,13 @@
 		<div class="flex flex-col md:flex-row justify-between items-center gap-6">
 			
 			<div class="footer-copy text-sm text-neutral-500 font-body">
-				<p>&copy; <?php echo date( 'Y' ); ?> 9024 Media Ltd. All Rights Reserved.</p>
+				<p>&copy; <?php echo wp_date( 'Y' ); ?> 9024 Media Ltd. All Rights Reserved.</p>
 			</div>
 			
 			<div class="footer-legal flex gap-8 text-sm text-white font-body">
-				<a href="#" class="hover:text-[#FB3C1E] transition-colors duration-300 no-underline">Privacy Policy</a>
-				<a href="#" class="hover:text-[#FB3C1E] transition-colors duration-300 no-underline">Terms of Use</a>
-				<a href="#" class="hover:text-[#FB3C1E] transition-colors duration-300 no-underline">Cookie Settings</a>
+				<a href="#" class="hover:text-[#FB3C1E] transition-colors duration-300 no-underline"><?php esc_html_e( 'Privacy Policy', '9024-media' ); ?></a>
+				<a href="#" class="hover:text-[#FB3C1E] transition-colors duration-300 no-underline"><?php esc_html_e( 'Terms of Use', '9024-media' ); ?></a>
+				<a href="#" class="hover:text-[#FB3C1E] transition-colors duration-300 no-underline"><?php esc_html_e( 'Cookie Settings', '9024-media' ); ?></a>
 			</div>
 
 		</div>

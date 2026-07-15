@@ -3,6 +3,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class( 'bg-white text-brand-black antialiased' ); ?>>
@@ -26,6 +28,22 @@
 		</div>
 	</div>
 </div>
+<noscript>
+	<style>#loader { display: none !important; }</style>
+</noscript>
+<script>
+	setTimeout(function() {
+		var loader = document.getElementById('loader');
+		if (loader && loader.style.display !== 'none') {
+			loader.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+			loader.style.opacity = '0';
+			loader.style.transform = 'translateY(-100%)';
+			setTimeout(function() {
+				loader.style.display = 'none';
+			}, 600);
+		}
+	}, 3000);
+</script>
 
 <header id="masthead" class="site-header absolute top-[36px] left-0 right-0 z-50 bg-transparent px-[48px] h-[86px] flex items-center box-border">
 	<div class="w-full flex justify-between items-center">
@@ -42,10 +60,10 @@
 		</div>
 		
 		<nav id="site-navigation" class="main-navigation flex items-center gap-6 md:gap-8">
-			<a href="#lets-chat" class="flex items-center justify-center w-[142px] h-[41px] border border-solid border-brand-orange text-white hover:bg-brand-orange hover:text-brand-black transition-all duration-300 no-underline font-sans font-normal text-[14px] leading-[26px] tracking-[0.1em] uppercase">
-				LET'S CHAT
+			<a href="#colophon" class="flex items-center justify-center w-[142px] h-[41px] border border-solid border-brand-orange text-white hover:bg-brand-orange hover:text-brand-black transition-all duration-300 no-underline font-sans font-normal text-[14px] leading-[26px] tracking-[0.1em] uppercase">
+				<?php esc_html_e( "LET'S CHAT", '9024-media' ); ?>
 			</a>
-			<button class="hamburger-menu flex items-center justify-center bg-transparent border-none p-0 cursor-pointer w-[41px] h-[26px]" aria-label="Toggle navigation menu">
+			<button class="hamburger-menu flex items-center justify-center bg-transparent border-none p-0 cursor-pointer w-[41px] h-[26px]" aria-label="<?php esc_attr_e( 'Toggle navigation menu', '9024-media' ); ?>" aria-expanded="false">
 				<svg width="41" height="26" viewBox="0 0 41 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="block">
 					<path d="M1 1H41" stroke="white" stroke-width="2" stroke-linecap="round"/>
 					<path d="M1 25H41" stroke="white" stroke-width="2" stroke-linecap="round"/>
@@ -68,7 +86,7 @@
 				<path d="M86.3389 44.8555V86.403H44.8398V44.8555H86.3389ZM54.072 54.0881V67.9371H72.5378V77.1703H77.1542V54.0881H72.5378V63.3208H58.6884V54.0881H54.072Z" fill="currentColor"/>
 			</svg>
 		</div>
-		<button class="nav-close-btn flex items-center justify-center bg-transparent border-none p-0 cursor-pointer w-[41px] h-[41px]" aria-label="Close menu">
+		<button class="nav-close-btn flex items-center justify-center bg-transparent border-none p-0 cursor-pointer w-[41px] h-[41px]" aria-label="<?php esc_attr_e( 'Close menu', '9024-media' ); ?>" aria-expanded="false">
 			<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="block">
 				<path d="M1 1L25 25" stroke="white" stroke-width="2" stroke-linecap="round"/>
 				<path d="M25 1L1 25" stroke="white" stroke-width="2" stroke-linecap="round"/>
@@ -77,18 +95,18 @@
 	</div>
 
 	<nav class="flex flex-col items-start gap-6 my-auto">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight">HOME</a>
-		<a href="#about" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight">ABOUT</a>
-		<a href="#services" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight">SERVICES</a>
-		<a href="#work" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight">OUR WORK</a>
-		<a href="#contact" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight">CONTACT</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight"><?php esc_html_e( 'HOME', '9024-media' ); ?></a>
+		<a href="<?php echo esc_url( home_url( '/#about' ) ); ?>" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight"><?php esc_html_e( 'ABOUT', '9024-media' ); ?></a>
+		<a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight"><?php esc_html_e( 'SERVICES', '9024-media' ); ?></a>
+		<a href="<?php echo esc_url( home_url( '/#work' ) ); ?>" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight"><?php esc_html_e( 'OUR WORK', '9024-media' ); ?></a>
+		<a href="#colophon" class="nav-overlay-link font-heading text-[48px] md:text-[80px] font-medium leading-[1.0] text-white hover:text-[#FB3C1E] transition-colors duration-300 no-underline uppercase tracking-tight"><?php esc_html_e( 'CONTACT', '9024-media' ); ?></a>
 	</nav>
 
 	<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 w-full text-neutral-400 font-heading text-sm tracking-widest uppercase">
 		<div class="flex gap-8">
-			<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">INSTAGRAM</a>
-			<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">LINKEDIN</a>
-			<a href="#" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">TIKTOK</a>
+			<a href="https://instagram.com/9024media" target="_blank" rel="noopener" class="text-white hover:text-[#FB3C1E] transition-colors no-underline"><?php esc_html_e( 'INSTAGRAM', '9024-media' ); ?></a>
+			<a href="https://linkedin.com/company/9024media" target="_blank" rel="noopener" class="text-white hover:text-[#FB3C1E] transition-colors no-underline"><?php esc_html_e( 'LINKEDIN', '9024-media' ); ?></a>
+			<a href="https://tiktok.com/@9024media" target="_blank" rel="noopener" class="text-white hover:text-[#FB3C1E] transition-colors no-underline"><?php esc_html_e( 'TIKTOK', '9024-media' ); ?></a>
 		</div>
 		<div>
 			<a href="mailto:hello@9024media.com" class="text-white hover:text-[#FB3C1E] transition-colors no-underline">HELLO@9024MEDIA.COM</a>

@@ -9,6 +9,9 @@
     "mode": "preview",
     "renderTemplate": "template.php"
   },
+  "supports": {
+    "align": ["full", "wide"]
+  },
   "style": "9024-logos-style",
   "script": "9024-logos-script"
 }

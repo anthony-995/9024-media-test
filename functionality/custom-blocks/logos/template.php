@@ -1,6 +1,6 @@
 <?php
 $logos = get_field( 'logos_list' ) ?: [];
-$align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
+$align_class = !empty( $block['align'] ) ? 'align' . $block['align'] : 'alignfull';
 
 if ( empty( $logos ) ) {
 	$theme_uri = get_template_directory_uri();

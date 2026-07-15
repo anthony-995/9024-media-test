@@ -10,6 +10,11 @@ const initServicesBlock = () => {
   const bgLayers = container.querySelectorAll('.service-bg-layer');
   const square = container.querySelector('.hover-square');
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion && square) {
+    square.style.display = 'none';
+  }
+
   menuItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
       const index = item.getAttribute('data-index');
@@ -30,7 +35,7 @@ const initServicesBlock = () => {
         }
       });
 
-      if (square) {
+      if (square && !prefersReducedMotion) {
         gsap.to(square, {
           opacity: 1,
           duration: 0.2,
@@ -40,7 +45,7 @@ const initServicesBlock = () => {
     });
 
     item.addEventListener('mousemove', (e) => {
-      if (!square || !menuContainer) return;
+      if (!square || !menuContainer || prefersReducedMotion) return;
 
       const rect = menuContainer.getBoundingClientRect();
       const x = e.clientX - rect.left - 12;
@@ -58,7 +63,7 @@ const initServicesBlock = () => {
   container.addEventListener('mouseleave', () => {
     bgLayers.forEach(layer => layer.classList.remove('active'));
     menuItems.forEach(mi => mi.classList.remove('hovered'));
-    if (square) {
+    if (square && !prefersReducedMotion) {
       gsap.to(square, {
         opacity: 0,
         duration: 0.3,

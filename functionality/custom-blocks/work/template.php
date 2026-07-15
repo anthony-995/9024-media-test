@@ -1,6 +1,6 @@
 <?php
-$section_title = get_field( 'section_title' ) ?: 'OUR WORK';
-$see_all_text = get_field( 'see_all_text' ) ?: 'SEE ALL CASE STUDIES';
+$section_title = get_field( 'section_title' ) ?: __( 'OUR WORK', '9024-media' );
+$see_all_text = get_field( 'see_all_text' ) ?: __( 'SEE ALL CASE STUDIES', '9024-media' );
 $see_all_url = get_field( 'see_all_url' ) ?: '#';
 $case_studies = get_field( 'case_studies' ) ?: [];
 
@@ -46,7 +46,7 @@ for ($i = 0; $i < 4; $i++) {
 	}
 }
 
-$align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
+$align_class = !empty( $block['align'] ) ? 'align' . $block['align'] : 'alignfull';
 ?>
 
 <section class="work-block relative w-full bg-white py-24 lg:py-32 overflow-hidden <?php echo esc_attr( $align_class ); ?>">
@@ -65,7 +65,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 					<div class="relative w-full">
 						<div class="work-card card-1 group" data-card-id="1">
 							<div class="absolute inset-0 z-0 bg-neutral-900">
-								<?php if ( 'video' === $case['case_bg_type'] && $case['case_video'] ) : ?>
+								<?php if ( 'video' === $case['case_bg_type'] && !empty($case['case_video']) ) : ?>
 									<video autoplay loop muted playsinline class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
 										<source src="<?php echo esc_url( $case['case_video'] ); ?>" type="video/mp4">
 									</video>
@@ -87,7 +87,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 									<?php echo esc_html( $case['case_desc'] ); ?>
 								</p>
 								<a href="<?php echo esc_url( $case['case_link'] ); ?>" class="card-hover-btn bg-[#FB3C1E] text-white px-8 py-4 font-heading text-[16px] lg:text-[18px] font-bold uppercase tracking-wider transition-transform duration-300 hover:scale-105">
-									VIEW CASE STUDY
+									<?php esc_html_e( 'VIEW CASE STUDY', '9024-media' ); ?>
 								</a>
 							</div>
 						</div>
@@ -104,7 +104,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 				<?php if (isset($case_studies[2])) : $case = $case_studies[2]; ?>
 					<div class="work-card card-3 group" data-card-id="3">
 						<div class="absolute inset-0 z-0 bg-neutral-900">
-							<?php if ( 'video' === $case['case_bg_type'] && $case['case_video'] ) : ?>
+							<?php if ( 'video' === $case['case_bg_type'] && !empty($case['case_video']) ) : ?>
 								<video autoplay loop muted playsinline class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
 									<source src="<?php echo esc_url( $case['case_video'] ); ?>" type="video/mp4">
 								</video>
@@ -126,7 +126,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 								<?php echo esc_html( $case['case_desc'] ); ?>
 							</p>
 							<a href="<?php echo esc_url( $case['case_link'] ); ?>" class="card-hover-btn bg-[#FB3C1E] text-white px-8 py-4 font-heading text-[16px] lg:text-[18px] font-bold uppercase tracking-wider transition-transform duration-300 hover:scale-105">
-									VIEW CASE STUDY
+									<?php esc_html_e( 'VIEW CASE STUDY', '9024-media' ); ?>
 							</a>
 						</div>
 					</div>
@@ -140,7 +140,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 					<div class="relative w-full">
 						<div class="work-card card-2 group" data-card-id="2">
 							<div class="absolute inset-0 z-0 bg-neutral-900">
-								<?php if ( 'video' === $case['case_bg_type'] && $case['case_video'] ) : ?>
+								<?php if ( 'video' === $case['case_bg_type'] && !empty($case['case_video']) ) : ?>
 									<video autoplay loop muted playsinline class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
 										<source src="<?php echo esc_url( $case['case_video'] ); ?>" type="video/mp4">
 									</video>
@@ -162,7 +162,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 									<?php echo esc_html( $case['case_desc'] ); ?>
 								</p>
 								<a href="<?php echo esc_url( $case['case_link'] ); ?>" class="card-hover-btn bg-[#FB3C1E] text-white px-8 py-4 font-heading text-[16px] lg:text-[18px] font-bold uppercase tracking-wider transition-transform duration-300 hover:scale-105">
-									VIEW CASE STUDY
+									<?php esc_html_e( 'VIEW CASE STUDY', '9024-media' ); ?>
 								</a>
 							</div>
 						</div>
@@ -181,7 +181,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 					<div class="relative w-full">
 						<div class="work-card card-4 group" data-card-id="4">
 							<div class="absolute inset-0 z-0 bg-neutral-900">
-								<?php if ( 'video' === $case['case_bg_type'] && $case['case_video'] ) : ?>
+								<?php if ( 'video' === $case['case_bg_type'] && !empty($case['case_video']) ) : ?>
 									<video autoplay loop muted playsinline class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
 										<source src="<?php echo esc_url( $case['case_video'] ); ?>" type="video/mp4">
 									</video>
@@ -203,7 +203,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 									<?php echo esc_html( $case['case_desc'] ); ?>
 								</p>
 								<a href="<?php echo esc_url( $case['case_link'] ); ?>" class="card-hover-btn bg-[#FB3C1E] text-white px-8 py-4 font-heading text-[16px] lg:text-[18px] font-bold uppercase tracking-wider transition-transform duration-300 hover:scale-105">
-									VIEW CASE STUDY
+									<?php esc_html_e( 'VIEW CASE STUDY', '9024-media' ); ?>
 								</a>
 							</div>
 						</div>

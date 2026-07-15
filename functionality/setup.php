@@ -49,7 +49,8 @@ function _9024_register_block_assets( $block_name ) {
 	$css_handle = "9024-{$block_name}-style";
 	$css_rel = "/assets/dist/css/{$block_name}.css";
 	if ( file_exists( $theme_dir . $css_rel ) ) {
-		wp_register_style( $css_handle, $theme_uri . $css_rel, array(), '1.0.0' );
+		$css_ver = filemtime( $theme_dir . $css_rel );
+		wp_register_style( $css_handle, $theme_uri . $css_rel, array(), $css_ver );
 	}
 
 	$js_handle = "9024-{$block_name}-script";
@@ -59,7 +60,8 @@ function _9024_register_block_assets( $block_name ) {
 	} else {
 		$js_rel = "/assets/dist/js/{$block_name}.js";
 		if ( file_exists( $theme_dir . $js_rel ) ) {
-			wp_register_script( $js_handle, $theme_uri . $js_rel, array(), '1.0.0', true );
+			$js_ver = filemtime( $theme_dir . $js_rel );
+			wp_register_script( $js_handle, $theme_uri . $js_rel, array(), $js_ver, true );
 		}
 	}
 }

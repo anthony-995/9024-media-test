@@ -5,8 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const initWorkBlock = () => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const leftCol = document.querySelector('.work-col-left');
-  if (leftCol) {
+  if (leftCol && !prefersReducedMotion) {
     gsap.fromTo(leftCol, 
       { y: 200 }, 
       { 
@@ -23,7 +25,7 @@ const initWorkBlock = () => {
   }
 
   const rightCol = document.querySelector('.work-col-right');
-  if (rightCol) {
+  if (rightCol && !prefersReducedMotion) {
     gsap.fromTo(rightCol, 
       { y: 400 }, 
       { 
@@ -44,7 +46,7 @@ const initWorkBlock = () => {
   const pixelRight = document.querySelector('.work-pixel-right');
   const pixelBottom = document.querySelector('.work-pixel-bottom');
 
-  if (container) {
+  if (container && !prefersReducedMotion) {
     container.addEventListener('mousemove', (e) => {
       const rect = container.getBoundingClientRect();
       const moveX = ((e.clientX - rect.left) / rect.width) - 0.5;

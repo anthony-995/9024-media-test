@@ -1,6 +1,6 @@
 <?php
-$title_line_1 = preg_replace( '/^\s+|\s+$/u', '', get_field( 'title_line_1' ) ?: 'WE ARE' );
-$title_line_2 = preg_replace( '/^\s+|\s+$/u', '', get_field( 'title_line_2' ) ?: '9024' );
+$title_line_1 = trim( get_field( 'title_line_1' ) ?: 'WE ARE' );
+$title_line_2 = trim( get_field( 'title_line_2' ) ?: '9024' );
 $subheading = get_field( 'subheading' ) ?: 'WE TELL YOUR STORY';
 $description_text = get_field( 'description_text' );
 $button_text = get_field( 'button_text' ) ?: 'LEARN MORE ABOUT US';
@@ -12,7 +12,7 @@ $post_image_2 = get_field( 'post_image_2' ) ?: $theme_uri . '/assets/images/abou
 $post_image_3 = get_field( 'post_image_3' ) ?: $theme_uri . '/assets/images/about_post_2.jpg';
 $post_image_4 = get_field( 'post_image_4' ) ?: $theme_uri . '/assets/images/about_post_4.jpg';
 
-$align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
+$align_class = !empty( $block['align'] ) ? 'align' . $block['align'] : 'alignfull';
 ?>
 
 <section class="about-block relative w-full bg-white text-brand-black py-24 lg:py-0 lg:h-[1245px] overflow-hidden <?php echo esc_attr( $align_class ); ?>">

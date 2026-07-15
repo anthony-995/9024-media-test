@@ -43,7 +43,7 @@ if ( have_rows( 'service_subtitles_3' ) ) {
 }
 $subtitle_str_3 = !empty($subtitles_3) ? implode( ' | ', $subtitles_3 ) : 'PLAYERS | BRANDS | AGENCIES';
 
-$align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
+$align_class = !empty( $block['align'] ) ? 'align' . $block['align'] : 'alignfull';
 ?>
 
 <section class="services-block relative w-full h-[400px] md:h-[600px] lg:h-[1082px] bg-brand-black overflow-hidden flex items-center justify-center <?php echo esc_attr( $align_class ); ?>">
