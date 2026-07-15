@@ -35,9 +35,9 @@
 				</div>
 
 				<div class="flex gap-6 text-sm font-heading tracking-widest uppercase">
-					<a href="#" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">INSTAGRAM</a>
-					<a href="#" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">LINKEDIN</a>
-					<a href="#" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">TIKTOK</a>
+					<a href="https://instagram.com/9024media" target="_blank" rel="noopener" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">INSTAGRAM</a>
+					<a href="https://linkedin.com/company/9024media" target="_blank" rel="noopener" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">LINKEDIN</a>
+					<a href="https://tiktok.com/@9024media" target="_blank" rel="noopener" class="text-neutral-400 hover:text-[#FB3C1E] transition-colors no-underline">TIKTOK</a>
 				</div>
 
 			</div>
