@@ -38,6 +38,53 @@ const initWorkBlock = () => {
       }
     );
   }
+
+  const container = document.querySelector('.work-block');
+  const pixelLeft = document.querySelector('.work-pixel-left');
+  const pixelRight = document.querySelector('.work-pixel-right');
+  const pixelBottom = document.querySelector('.work-pixel-bottom');
+
+  if (container) {
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const moveX = ((e.clientX - rect.left) / rect.width) - 0.5;
+      const moveY = ((e.clientY - rect.top) / rect.height) - 0.5;
+
+      if (pixelLeft) {
+        gsap.to(pixelLeft, {
+          x: moveX * 50,
+          y: moveY * 50,
+          duration: 0.8,
+          ease: 'power2.out'
+        });
+      }
+      if (pixelRight) {
+        gsap.to(pixelRight, {
+          x: moveX * 70,
+          y: moveY * 70,
+          duration: 0.8,
+          ease: 'power2.out'
+        });
+      }
+      if (pixelBottom) {
+        gsap.to(pixelBottom, {
+          x: moveX * -40,
+          y: moveY * -40,
+          duration: 0.8,
+          ease: 'power2.out'
+        });
+      }
+    });
+
+    container.addEventListener('mouseleave', () => {
+      const pixels = [pixelLeft, pixelRight, pixelBottom];
+      pixels.forEach(p => {
+        if (p) {
+          gsap.to(p, { x: 0, y: 0, duration: 0.8, ease: 'power2.out' });
+        }
+      });
+    });
+  }
 };
 
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
