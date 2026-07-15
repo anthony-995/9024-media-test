@@ -19,27 +19,27 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 	
 	<div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
 		
-		<div class="lg:col-span-5 flex flex-col items-start relative lg:pt-[100px]">
+		<div class="lg:col-span-5 flex flex-col items-start relative lg:pt-[100px] z-10">
 			
-			<div class="about-title-wrap font-heading text-brand-black leading-none uppercase tracking-tighter mb-16 lg:mb-[80px] relative z-0">
-				<div class="text-[60px] md:text-[180px] lg:text-[300px] font-medium leading-[0.8] relative z-0 select-none whitespace-nowrap">
+			<div class="about-title-wrap font-heading text-brand-black leading-none uppercase tracking-tighter mb-16 lg:mb-[80px] relative z-0 w-full">
+				<div class="text-[60px] md:text-[180px] lg:text-[300px] font-medium leading-[0.8] relative z-0 select-none whitespace-nowrap lg:-ml-[80px]">
 					<?php echo esc_html( $title_line_1 ); ?>
 				</div>
-				<div class="relative mt-2 lg:pl-[120px] pt-3">
+				<div class="relative mt-2 lg:pl-[80px] pt-3">
 					<div class="text-[60px] md:text-[180px] lg:text-[300px] font-medium leading-[0.8] relative z-0 select-none whitespace-nowrap">
 						<?php echo esc_html( $title_line_2 ); ?>
 					</div>
-					<div class="about-pixel-left absolute left-[-80px] md:left-[-160px] lg:left-[-240px] top-[30%] -translate-y-1/2 z-0 pointer-events-none select-none">
+					<div class="about-pixel-left absolute left-[-60px] md:left-[-100px] lg:left-[-140px] top-[45%] -translate-y-1/2 z-0 pointer-events-none select-none">
 						<svg width="126" height="215" viewBox="0 0 126 215" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M126 29H97V0H126V29Z" fill="#1D1E1C"/>
-							<path d="M16 84H0V68H16V84Z" fill="#1D1E1C"/>
+							<path opacity="0.25" d="M126 29H97V0H126V29Z" fill="#1D1E1C"/>
+							<path opacity="0.25" d="M16 84H0V68H16V84Z" fill="#1D1E1C"/>
 							<path d="M48 215H16V183H48V215Z" fill="#1D1E1C"/>
 						</svg>
 					</div>
 				</div>
 			</div>
 
-			<div class="pl-0 lg:pl-[124px] max-w-lg relative z-10 flex flex-col items-start">
+			<div class="pl-0 lg:pl-[84px] max-w-[420px] relative z-10 flex flex-col items-start">
 				<?php if ( $subheading ) : ?>
 					<h2 class="text-2xl md:text-[36px] font-heading font-bold text-brand-black uppercase tracking-tight mb-6">
 						<?php echo esc_html( $subheading ); ?>
@@ -61,7 +61,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 
 		</div>
 
-		<div class="lg:col-span-7 flex flex-col md:flex-row gap-8 lg:gap-[56px] relative items-start w-full lg:w-[1258px] max-w-none">
+		<div class="lg:col-span-7 flex flex-col md:flex-row gap-8 lg:gap-[56px] relative items-start w-full lg:w-[1258px] max-w-none z-20">
 			
 			<div class="about-grid-col-left flex flex-col gap-8 lg:gap-[40px] w-full lg:w-[601px] lg:pt-[100px] flex-shrink-0 relative z-10">
 				
@@ -153,11 +153,11 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 					</div>
 				</div>
 
-				<div class="about-pixel-bottom absolute left-[-20px] md:left-[-30px] lg:left-[-50px] bottom-[100px] lg:bottom-[130px] z-0 pointer-events-none select-none">
+				<div class="about-pixel-bottom absolute left-[-60px] md:left-[-100px] lg:left-[-160px] bottom-[100px] lg:bottom-[130px] z-0 pointer-events-none select-none">
 					<svg width="93" height="238" viewBox="0 0 93 238" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M32 161H0V129H32V161Z" fill="#1D1E1C"/>
-						<path d="M32 0H48V16H32V0Z" fill="#1D1E1C"/>
-						<path d="M64 209H93V238H64V209Z" fill="#1D1E1C"/>
+						<path opacity="0.25" d="M32 0H48V16H32V0Z" fill="#1D1E1C"/>
+						<path opacity="0.25" d="M64 209H93V238H64V209Z" fill="#1D1E1C"/>
 					</svg>
 				</div>
 
@@ -165,10 +165,10 @@ $align_class = $block['align'] ? 'align' . $block['align'] : 'alignfull';
 
 			<div class="about-grid-col-right flex flex-col gap-8 lg:gap-[40px] w-full lg:w-[601px] flex-shrink-0 lg:pt-[385px] relative z-10">
 				
-				<div class="about-pixel-right absolute right-[10%] lg:right-[15%] top-[80px] lg:top-[120px] z-0 pointer-events-none select-none">
+				<div class="about-pixel-right absolute right-[20%] lg:right-[28%] top-[80px] lg:top-[120px] z-0 pointer-events-none select-none">
 					<svg width="236" height="215" viewBox="0 0 236 215" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 186H29V215H0V186Z" fill="#1D1E1C"/>
-						<path d="M110 131H126V147H110V131Z" fill="#1D1E1C"/>
+						<path opacity="0.25" d="M0 186H29V215H0V186Z" fill="#1D1E1C"/>
+						<path opacity="0.25" d="M110 131H126V147H110V131Z" fill="#1D1E1C"/>
 						<path d="M172 104H236V167H172V104Z" fill="#1D1E1C"/>
 						<path d="M73 0H105V32H73V0Z" fill="#1D1E1C"/>
 					</svg>
