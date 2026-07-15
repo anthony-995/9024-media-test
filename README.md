@@ -139,5 +139,4 @@ Renders an infinite scrolling partner logos ticker.
 
 When deploying the theme to a shared hosting environment:
 1.  Run `npm run build` locally to compile all assets into the `/assets/dist/` directory.
-2.  If exporting the site via **All-in-One WP Migration**, use the advanced settings to exclude `node_modules` and `.git` folders to minimize the output file size.
-3.  Once imported, the theme will run on the live server instantly. Node.js is not required on the production host, as the local dev socket checker (`_9024_is_dev()`) fails silently and defaults to serving static assets.
+2.  Once imported, the theme will run on the live server instantly. Node.js is not required on the production host, as the local dev socket checker (`_9024_is_dev()`) fails silently and defaults to serving static assets.
